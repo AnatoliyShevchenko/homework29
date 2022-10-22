@@ -1,0 +1,27 @@
+h1
+{
+    color: red;
+}
+#a1
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* #a2
+{
+    display: flex;
+    flex-direction: column;
+} */
+.q1
+{
+    margin-top: 2%;
+}
+.w1
+{
+    border: 2px solid yellowgreen;
+    display: flex;
+    flex-direction: column;
+    min-width: 33%;
+    text-align: center;
+}

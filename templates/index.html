@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <title>Famous Persons</title>
+</head>
+<body>
+    <div id="s1">
+        <h1>The most powerful people of the world</h1>
+        <div id="a1">
+            {% for i in persons %}
+            <div class="w1">
+                <h2>Имя: {{ i.name }}</h2>
+                <h3>Годы Жизни: {{ i.ages }}</h3>
+                <h3>Примечания: {{ i.info }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div id="a2">
+            <h1>Do you know other people?</h1>
+            <form action="/add" method="post">
+                <input type="text" value="" placeholder="name" name="name" class="q1"><br>
+                <input type="text" value="" placeholder="ages of life" name="age" class="q1"><br>
+                <input type="text" value="" placeholder="about person" name="about" class="q1"><br>
+                <input type="submit" value="add" class="q1">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
